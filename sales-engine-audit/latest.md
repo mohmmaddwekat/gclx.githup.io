@@ -1,26 +1,29 @@
-# Website Sales Engine — latest zero-run audit
+# Website Sales Engine — latest execution audit
 
-Run timestamp: 2026-09-05 08:01 Asia/Hebron
+Run timestamp: 2026-09-05 10:02 Asia/Hebron
 
-Outcome: 0 valid delivered NEW initial outreach so far; no genuine active sales conversation found in the checked recent Gmail window. A qualified NEW candidate was found and built; deployment is RESUME PENDING and no email has been sent before the exact-SHA success gate.
+Outcome: 0 valid delivered NEW initial outreach so far; no genuine active sales conversation found in the checked recent Gmail window. A genuinely NEW qualified candidate was found and built. Deployment is RESUME PENDING; no email was sent before exact-SHA SUCCESS.
 
-Source family: OregonBuys 2026 government bid-holder/vendor records.
+Source families / candidates inspected:
+1. Oregon/Portland 2026 government bid-holder records — Nueva Era Landscaping rejected immediately: functioning identity-matched official site confirmed with matching phone/email. Yard Perfections rejected: current sources point to functioning web presence.
+2. Virginia Department of Transportation current prequalified-vendor list — JSD Welding LLC PASSED.
 
-Candidates / fast-screen sequence:
-1. Naomi's Cleaning — rejected: functioning identity-matched official site naomiscleaning.com confirmed with matching phone.
-2. Top Choice Commercial Cleaning — rejected: functioning identity-matched Strikingly site confirmed with matching phone.
-3. Crystal Clear SRV LLC — rejected: functioning identity-matched crystalclearsrv.com confirmed with matching phone/current active license evidence.
-4. Busy B's Equipment & More LLC — rejected: functioning identity-matched busybsequipment.com confirmed with matching phone.
-5. Cony's Landscape Maintenance LLC — PASSED fast no-site screen in bounded current search. OregonBuys independently records the same exact public email Conyslandscape@gmail.com and phone (503) 975-8437 across multiple 2026 bid-holder records, including April and May/August 2026 activity. This repeated current government-source identity evidence is the EMAIL QUALITY B basis.
+JSD Welding LLC qualification:
+- Dataset: VDOT Department's List of Prequalified Vendors, printed 2025-11-26.
+- Current activity basis: vendor J2358, subcontractor prequalification expiring 2026-06-30, work class 083 Welding.
+- Public business contact: JSDWELDINGLLC@gmail.com; (571) 379-1674; 6312 Bobcat Lane, King George, VA 22485; business contact Jonathan Dixon.
+- EMAIL QUALITY B basis: current government prequalification record strongly ties free-mail inbox to business identity, phone, address, vendor ID and welding work class.
+- Official-site fast screen: bounded identity/name/phone/address/email searches did not surface a functioning identity-matched standalone official website.
+- Dedup: exact-email Leads search returned 0 matches; Gmail to:JSDWELDINGLLC@GMAIL.COM returned 0 prior messages. PASSED before build.
 
-Dedup for Cony's: exact-email Leads search returned 0 matches; Gmail to:Conyslandscape@gmail.com returned 0 prior messages. DEDUP PASSED before build.
-
-Build state: created professional responsive 4-page site at clients/conys-landscape-maintenance/ (Home, Services, About, Contact). Final build SHA: 12674bd43673fee70c330cb5a987bf79650deb2a. Exact-SHA Client Sites Pages workflow: 33946153708. Last observed status: in_progress, conclusion null. No Gmail draft/send and no Leads row created yet.
+Build state:
+- Created materially distinct responsive 4-page site at clients/jsd-welding/ (Home, Services, About, Contact).
+- Final production SHA: ed4177b78ee28590a28cdcaff65be75794643c78.
+- Exact-SHA Client Sites Pages workflow: 33951409123.
+- Last observed workflow state: in_progress, conclusion null, head_sha ed4177b78ee28590a28cdcaff65be75794643c78.
+- No Gmail draft/send and no Leads row created.
 
 Last executable stage reached: exact-SHA Pages deployment gate.
-
-Observed blocker: deployment had not yet reached COMPLETED/SUCCESS at the final bounded check. This is a transient RESUME PENDING state, not a qualification failure.
-
-Fallback attempted: not applicable after qualification; discovery stopped immediately as required.
-
-Next-run behavior change: resume Cony's FIRST, rerun exact-email dedup immediately before send, verify workflow 33946153708 is COMPLETED/SUCCESS on SHA 12674bd43673fee70c330cb5a987bf79650deb2a, perform Home+Contact QA, then send SUBJECT / SENDER TRUST D lead 1/2 and write exactly one Leads row. Do not restart discovery while this qualified deploy-pending candidate exists.
+Observed blocker: workflow 33951409123 had not yet reached COMPLETED/SUCCESS at the bounded check. This is RESUME PENDING, not a qualification failure.
+Fallback: discovery stopped immediately after qualification as required.
+Next-run behavior: resume JSD Welding FIRST; re-run exact-email Leads+Gmail dedup, verify workflow 33951409123 COMPLETED/SUCCESS on ed4177b78ee28590a28cdcaff65be75794643c78, QA Home+Contact, then send exactly one SUBJECT / SENDER TRUST D lead 2/2 message at $29.99/month, immediate bounce search, and exactly one Leads row. Do not restart discovery while this qualified candidate is pending.
