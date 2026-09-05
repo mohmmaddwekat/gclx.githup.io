@@ -1,24 +1,24 @@
 # Website Sales Engine — latest zero-run audit
 
-Run timestamp: 2026-09-05 05:59 Asia/Hebron
+Run timestamp: 2026-09-05 07:00 Asia/Hebron
 
 Outcome: 0 valid delivered NEW initial outreach; no genuine active sales conversation found in the checked recent Gmail window.
 
 Candidates / source families inspected in order:
-1. ECIA steel-fabrication/general-contractor member directory (UK) — Site Fab Limited exposed site_fab@aol.co.uk and no website field, but the bounded run did not establish a second current business-identity source for the exact free-mail address, so EMAIL QUALITY B was not established.
-2. Construction Industry Center member directory (Rapid City, South Dakota) — Stanley J. Johnsen Concrete Contractor, Inc. exposed rogerjohnsen@stanleyjohnsenconcrete.com, phone (605) 381-5551 and explicitly 'no website on file'. Exact-email Leads dedup returned no match and Gmail exact-recipient dedup returned no prior outreach. Qualification then failed: current independent evidence shows its Rapid City contractor license AEC1197 expired 2018 / inactive, and another current source identifies Complete Concrete, Inc. as formerly Stanley Johnsen Concrete Contractor, Inc.; other current directories also point to stanleyjohnsenconcrete.com. This does not meet the current-activity + no-functioning-official-site gate.
-3. Rail Forum / ECIA member results — Mayflower Engineering, Rayden Engineering, Washington Metalworks and multiple ECIA fabrication members exposed current emails but also functioning listed websites, so rejected at no-site gate.
+1. PWNA Active Members Directory — current 2025/2026 pressure/exterior-cleaning members were inspected as the primary current-membership source. The directory establishes recent membership/activity plus phone/address for many businesses, but the surfaced entries generally did not expose an exact public email needed for the A/B contact gate.
+2. FSCJ 2026 Pressure Washing & Window Cleaning procurement addenda — current January 2026 vendor-viewer records expose exact business emails. Under Pressure Pressure Washing (underpressure34711@gmail.com) was rejected because current independent evidence shows a functioning identity-matched official website underpressure34711.com. Amelia Building Maintenance (ameliacleaning@gmail.com) was rejected because a functioning identity-matched official website ameliabuildingmaintenance.com is current. Other domain-email vendors in the procurement list were not promoted without a completed no-site confirmation in the bounded run.
+3. National Australian Cleaners Association 2026 registry — confirmed a current 2026 cleaning-industry registry source, but the bounded surfaced page did not expose individual member contacts sufficient to pass exact-email qualification.
 
-Dedup: Stanley J. Johnsen Concrete reached dedup and PASSED exact-email checks (no Leads row for rogerjohnsen@stanleyjohnsenconcrete.com; no Gmail to that recipient), but failed subsequent current activity/no-site qualification. No existing lead was rebuilt or resent.
+Dedup: no candidate reached the build gate, so no build/commit occurred. No existing lead was rebuilt or resent.
 
-Source families attempted: current trade-association/member directories (ECIA, Rail Forum); contractor/member registry (Construction Industry Center); independent municipal contractor-license data and current contractor/business directories for corroboration.
+Source families attempted: 2025/2026 trade-association active-member directory (PWNA); current 2026 government/procurement vendor list (FSCJ); 2026 cleaning association registry (NACLA).
 
-Last executable stage reached: independent current identity/activity + no-site corroboration after dedup for Stanley J. Johnsen Concrete.
+Last executable stage reached: current activity + exact public contact discovery followed by independent official-site verification for FSCJ vendor candidates.
 
 Build state: no site files created; no prospect build commit; no Pages workflow; no Gmail draft/send; no Leads row.
 
-Observed blocker: directory-first sourcing produced exact public business emails, but the strongest no-site candidate failed current-activity/no-site corroboration because its contractor license is inactive/expired and current evidence links the former operation to another company and/or a website domain.
+Observed blocker: current-membership sources improved activity confidence, but PWNA surfaced phone/address without exact emails; the current government vendor list exposed exact emails but the strongest checked candidates had functioning official websites. No candidate completed A/B contact + no-site gates during the bounded run.
 
-Fallback attempted: moved from ECIA no-website/free-mail candidate to Construction Industry Center contractor directory, then corroborated with Rapid City municipal licensing and independent business/project sources rather than weakening A/B criteria.
+Fallback attempted: moved from PWNA active-member records to a January 2026 government procurement vendor list, then to a 2026 national cleaning registry while preserving the no-site and contact-quality gates.
 
-Next-run behavior change: prioritize current 2025/2026 chamber/vendor/member directories whose entries have an explicit last-updated/current membership signal and no website field; verify activity before exact-email dedup so inactive legacy contractors are rejected faster, while retaining dedup before any build/commit.
+Next-run behavior change: start with current government procurement/vendor documents that expose exact email, then immediately run official-site verification before any deeper corroboration; prioritize free-mail vendor addresses only when a second current identity source repeats the exact email, and domain-email vendors only when the domain itself does not resolve to an identity-matched business site.
