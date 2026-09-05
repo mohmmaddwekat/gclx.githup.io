@@ -1,24 +1,26 @@
 # Website Sales Engine — latest zero-run audit
 
-Run timestamp: 2026-09-05 07:00 Asia/Hebron
+Run timestamp: 2026-09-05 08:01 Asia/Hebron
 
-Outcome: 0 valid delivered NEW initial outreach; no genuine active sales conversation found in the checked recent Gmail window.
+Outcome: 0 valid delivered NEW initial outreach so far; no genuine active sales conversation found in the checked recent Gmail window. A qualified NEW candidate was found and built; deployment is RESUME PENDING and no email has been sent before the exact-SHA success gate.
 
-Candidates / source families inspected in order:
-1. PWNA Active Members Directory — current 2025/2026 pressure/exterior-cleaning members were inspected as the primary current-membership source. The directory establishes recent membership/activity plus phone/address for many businesses, but the surfaced entries generally did not expose an exact public email needed for the A/B contact gate.
-2. FSCJ 2026 Pressure Washing & Window Cleaning procurement addenda — current January 2026 vendor-viewer records expose exact business emails. Under Pressure Pressure Washing (underpressure34711@gmail.com) was rejected because current independent evidence shows a functioning identity-matched official website underpressure34711.com. Amelia Building Maintenance (ameliacleaning@gmail.com) was rejected because a functioning identity-matched official website ameliabuildingmaintenance.com is current. Other domain-email vendors in the procurement list were not promoted without a completed no-site confirmation in the bounded run.
-3. National Australian Cleaners Association 2026 registry — confirmed a current 2026 cleaning-industry registry source, but the bounded surfaced page did not expose individual member contacts sufficient to pass exact-email qualification.
+Source family: OregonBuys 2026 government bid-holder/vendor records.
 
-Dedup: no candidate reached the build gate, so no build/commit occurred. No existing lead was rebuilt or resent.
+Candidates / fast-screen sequence:
+1. Naomi's Cleaning — rejected: functioning identity-matched official site naomiscleaning.com confirmed with matching phone.
+2. Top Choice Commercial Cleaning — rejected: functioning identity-matched Strikingly site confirmed with matching phone.
+3. Crystal Clear SRV LLC — rejected: functioning identity-matched crystalclearsrv.com confirmed with matching phone/current active license evidence.
+4. Busy B's Equipment & More LLC — rejected: functioning identity-matched busybsequipment.com confirmed with matching phone.
+5. Cony's Landscape Maintenance LLC — PASSED fast no-site screen in bounded current search. OregonBuys independently records the same exact public email Conyslandscape@gmail.com and phone (503) 975-8437 across multiple 2026 bid-holder records, including April and May/August 2026 activity. This repeated current government-source identity evidence is the EMAIL QUALITY B basis.
 
-Source families attempted: 2025/2026 trade-association active-member directory (PWNA); current 2026 government/procurement vendor list (FSCJ); 2026 cleaning association registry (NACLA).
+Dedup for Cony's: exact-email Leads search returned 0 matches; Gmail to:Conyslandscape@gmail.com returned 0 prior messages. DEDUP PASSED before build.
 
-Last executable stage reached: current activity + exact public contact discovery followed by independent official-site verification for FSCJ vendor candidates.
+Build state: created professional responsive 4-page site at clients/conys-landscape-maintenance/ (Home, Services, About, Contact). Final build SHA: 12674bd43673fee70c330cb5a987bf79650deb2a. Exact-SHA Client Sites Pages workflow: 33946153708. Last observed status: in_progress, conclusion null. No Gmail draft/send and no Leads row created yet.
 
-Build state: no site files created; no prospect build commit; no Pages workflow; no Gmail draft/send; no Leads row.
+Last executable stage reached: exact-SHA Pages deployment gate.
 
-Observed blocker: current-membership sources improved activity confidence, but PWNA surfaced phone/address without exact emails; the current government vendor list exposed exact emails but the strongest checked candidates had functioning official websites. No candidate completed A/B contact + no-site gates during the bounded run.
+Observed blocker: deployment had not yet reached COMPLETED/SUCCESS at the final bounded check. This is a transient RESUME PENDING state, not a qualification failure.
 
-Fallback attempted: moved from PWNA active-member records to a January 2026 government procurement vendor list, then to a 2026 national cleaning registry while preserving the no-site and contact-quality gates.
+Fallback attempted: not applicable after qualification; discovery stopped immediately as required.
 
-Next-run behavior change: start with current government procurement/vendor documents that expose exact email, then immediately run official-site verification before any deeper corroboration; prioritize free-mail vendor addresses only when a second current identity source repeats the exact email, and domain-email vendors only when the domain itself does not resolve to an identity-matched business site.
+Next-run behavior change: resume Cony's FIRST, rerun exact-email dedup immediately before send, verify workflow 33946153708 is COMPLETED/SUCCESS on SHA 12674bd43673fee70c330cb5a987bf79650deb2a, perform Home+Contact QA, then send SUBJECT / SENDER TRUST D lead 1/2 and write exactly one Leads row. Do not restart discovery while this qualified deploy-pending candidate exists.
