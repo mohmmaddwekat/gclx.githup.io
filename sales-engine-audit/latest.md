@@ -1,25 +1,24 @@
 # Website Sales Engine — latest zero-run audit
 
-Run timestamp: 2026-09-05 05:00 Asia/Hebron
+Run timestamp: 2026-09-05 05:59 Asia/Hebron
 
 Outcome: 0 valid delivered NEW initial outreach; no genuine active sales conversation found in the checked recent Gmail window.
 
 Candidates / source families inspected in order:
-1. Broad current-web search: pressure washing + no website + email (Canada) — no candidate surfaced that simultaneously exposed a current exact public business email, explicit no-site evidence, and independent business corroboration.
-2. Broad current-web search: tree service + no website + email (UK) — no candidate meeting the TEST D A/B qualification gate surfaced.
-3. Broad current-web search: commercial cleaning + no website + email (Australia) — results were predominantly marketing/lead-generation vendors rather than qualifying prospects.
-4. Christchurch Tree Service Limited (NZ Companies Office-derived BizDB record) — rejected: contact email shown is ryan@digitworkz.com, which is not sufficiently trustworthy as a current public business inbox for the tree-service identity; record also shows director end date Jul 2026, weakening current-activity confidence.
+1. ECIA steel-fabrication/general-contractor member directory (UK) — Site Fab Limited exposed site_fab@aol.co.uk and no website field, but the bounded run did not establish a second current business-identity source for the exact free-mail address, so EMAIL QUALITY B was not established.
+2. Construction Industry Center member directory (Rapid City, South Dakota) — Stanley J. Johnsen Concrete Contractor, Inc. exposed rogerjohnsen@stanleyjohnsenconcrete.com, phone (605) 381-5551 and explicitly 'no website on file'. Exact-email Leads dedup returned no match and Gmail exact-recipient dedup returned no prior outreach. Qualification then failed: current independent evidence shows its Rapid City contractor license AEC1197 expired 2018 / inactive, and another current source identifies Complete Concrete, Inc. as formerly Stanley Johnsen Concrete Contractor, Inc.; other current directories also point to stanleyjohnsenconcrete.com. This does not meet the current-activity + no-functioning-official-site gate.
+3. Rail Forum / ECIA member results — Mayflower Engineering, Rayden Engineering, Washington Metalworks and multiple ECIA fabrication members exposed current emails but also functioning listed websites, so rejected at no-site gate.
 
-Dedup gate: no candidate reached the exact-email dedup stage because none passed the current-contact qualification gate. Existing completed leads were not rebuilt or resent.
+Dedup: Stanley J. Johnsen Concrete reached dedup and PASSED exact-email checks (no Leads row for rogerjohnsen@stanleyjohnsenconcrete.com; no Gmail to that recipient), but failed subsequent current activity/no-site qualification. No existing lead was rebuilt or resent.
 
-Source families attempted: current web search; NZ Companies Office-derived business registry aggregation.
+Source families attempted: current trade-association/member directories (ECIA, Rail Forum); contractor/member registry (Construction Industry Center); independent municipal contractor-license data and current contractor/business directories for corroboration.
 
-Last executable stage reached: CONTACT+NO-SITE candidate review. No candidate passed EMAIL QUALITY A/B + current identity/activity corroboration.
+Last executable stage reached: independent current identity/activity + no-site corroboration after dedup for Stanley J. Johnsen Concrete.
 
 Build state: no site files created; no prospect build commit; no Pages workflow; no Gmail draft/send; no Leads row.
 
-Observed blocker: available candidates in this bounded run lacked a trustworthy current exact public business inbox with independent corroboration while also satisfying no functioning official standalone website.
+Observed blocker: directory-first sourcing produced exact public business emails, but the strongest no-site candidate failed current-activity/no-site corroboration because its contractor license is inactive/expired and current evidence links the former operation to another company and/or a website domain.
 
-Fallback attempted: broadened from pressure washing Canada to tree service UK to commercial cleaning Australia, then inspected a registry-derived NZ tree-service record.
+Fallback attempted: moved from ECIA no-website/free-mail candidate to Construction Industry Center contractor directory, then corroborated with Rapid City municipal licensing and independent business/project sources rather than weakening A/B criteria.
 
-Next-run behavior change: prioritize current trade-association/member directories and local-government/vendor registries that expose a business email plus phone/address, then independently verify no-site status; run exact-email Leads/Gmail dedup immediately once such a candidate is found.
+Next-run behavior change: prioritize current 2025/2026 chamber/vendor/member directories whose entries have an explicit last-updated/current membership signal and no website field; verify activity before exact-email dedup so inactive legacy contractors are rejected faster, while retaining dedup before any build/commit.
