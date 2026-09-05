@@ -1,23 +1,25 @@
 # Website Sales Engine — latest execution audit
 
-Run timestamp: 2026-09-05 13:02 Asia/Hebron
+Run timestamp: 2026-09-05 15:02 Asia/Hebron
 
-Outcome: 0 valid delivered NEW initial outreach in this run; no genuine prospect reply was found in the fresh Gmail reconciliation.
+Outcome: 0 valid delivered NEW initial outreach in this run; no genuine prospect reply was found in fresh Gmail reconciliation.
 
 Candidate sequence:
-1. I & R Landscape LLC — Oregon. Correct exact public email from OregonBuys: Iandrlandscapellc@gmail.com; phone (503) 798-5157; contact Ismael Martinez. OregonBuys records show participation in 2026 bid-holder lists. Independent current contractor-license evidence identifies I & R Landscape LLC, license 247850, active through 2028 with the same phone. Bounded official-site screen did not surface a functioning identity-matched standalone official website.
+1. 5 Star Property Maintenance & Pressure Washing LLC — current Charlotte County 2026 vendor record exposes exact email and phone; rejected immediately because functioning identity-matched official site 5starpropertympw.com exists.
+2. Platinum Touch Pressure Washing LLC — current Charlotte County vendor record exposes exact email/phone; rejected because functioning identity-matched official website exists.
+3. Rogers Brothers Land Clearing LLC — Bristol, Florida. Current 2026 Charlotte County vendor records expose rogersbrotherslandclearing@hotmail.com and (850) 510-3689. Independent current carrier evidence reports active USDOT 3370726 and 2025 mileage; Florida entity evidence also identifies the same Bristol address. Bounded official-site search did not surface a functioning identity-matched standalone official website.
 
-Dedup:
-- Leads exact-email search for Iandrlandscapellc@gmail.com: 0 matches.
+Dedup for Rogers Brothers:
+- Leads exact-email search: 0 matches.
 - Gmail exact-recipient search: 0 prior messages.
 
 Build/deployment state:
-- Four prospect pages created under clients/ir-landscape/: index.html, services.html, about.html, contact.html.
-- Final production SHA after Contact page: 950397e643350bcca55ff43b851b493e58e87786.
-- Exact-SHA GitHub Actions lookup immediately after commit returned no workflow run yet (total_count 0). Therefore no deployment SUCCESS is claimed and no Gmail was sent.
+- Four prospect pages created under clients/rogers-brothers-land-clearing/: index.html, services.html, about.html, contact.html.
+- Final production SHA: fa226cb6e4cc4f725ea59849910d47ed8b6073b0.
+- Exact-SHA Client Sites Pages workflow 33964976700 appeared and was still in_progress at the checked point; conclusion null. Therefore no Gmail was sent before deployment SUCCESS.
 - No Gmail draft/send and no Leads row created.
 
-Last stage reached: build complete; waiting for exact-SHA Pages workflow to appear and complete successfully.
-Observed blocker: deployment workflow had not yet appeared for final SHA at the immediate check; this is a transient deployment-wait state, not a qualification failure.
-Fallback attempted: persisted exact candidate/email/path/final SHA externally instead of restarting discovery or sending before deployment verification.
-Next-run change: RESUME I & R Landscape LLC FIRST; rerun exact-email dedup, check exact-SHA Pages workflow for 950397e643350bcca55ff43b851b493e58e87786, perform Home+Contact QA after SUCCESS, then send one H1 initial outreach, bounce-check, and write exactly one Leads row. Do not rediscover/build another candidate while this qualified deployment-pending candidate exists.
+Last stage reached: build complete; exact-SHA production deployment in progress.
+Observed blocker: transient deployment wait on Client Sites Pages workflow 33964976700, not qualification or dedup failure.
+Fallback attempted: qualified and built the candidate, checked exact-SHA workflow, and persisted RESUME PENDING instead of sending before verified SUCCESS.
+Next-run change: RESUME Rogers Brothers FIRST; recheck exact-email dedup, verify workflow 33964976700 COMPLETED/SUCCESS on fa226cb6e4cc4f725ea59849910d47ed8b6073b0, perform Home+Contact QA, then send one concise revenue-first initial outreach, immediate bounce check, and exactly one Leads row. After completion, continue to the next candidate if runtime remains.
